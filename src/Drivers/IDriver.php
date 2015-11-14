@@ -64,7 +64,7 @@ interface IDriver
 
 
 	/**
-	 * Returns the last inseted id.
+	 * Returns the last inserted id.
 	 * @param  string|NULL  $sequenceName
 	 * @return mixed
 	 */
@@ -79,7 +79,7 @@ interface IDriver
 
 
 	/**
-	 * Creates database plafrom.
+	 * Creates database platform.
 	 * @param  Connection $connection
 	 * @return IPlatform
 	 */

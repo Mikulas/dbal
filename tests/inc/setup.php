@@ -22,6 +22,10 @@ $config = parse_ini_file(__DIR__ . '/../databases.ini', TRUE);
 foreach ($config as $name => $configDatabase) {
 	echo "[setup] Bootstraping '{$name}' structure.\n";
 
+	if ($name === 'pdopg') {
+		$name = 'pgsql';
+	}
+
 	$connection = new Connection($configDatabase);
 	$resetFunction = require __DIR__ . "/../data/{$name}-reset.php";
 	$resetFunction($connection, $configDatabase['database']);
